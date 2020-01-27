@@ -1,1 +1,3 @@
 # day-planner
+
+This is the day planner. With this, you will be able to track events throughout your day. And don't worry, everything is stored so you can come back to it later, refresh and your events will still be there so long as you press the blue save button on the right of each event timeslot. Be aware that the times are not only displayed but are also color coded to reflect time that has past (grey), the current hour (red) and time that has yet to come (green).
