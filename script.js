@@ -21,13 +21,13 @@ var date = new Date();
         for(var m = moment(startTime);  m.isBefore(endTime); m.add(1, 'hours')){
             var objId = "hour"+ (i++).toString();
             if((moment(m).isAfter(moment(), 'hour')) == true){
-                $("#mainContainer").append("<div class='row' id='hour"+ i ++ +"'style='margin-top: -1px'><div class='col-md-1' style='border-top: 1px solid #000; border-bottom: 1px solid #000;'><p>" + m.format('h a') + "</p></div><div class='col-md-10 future' style='border: 1px solid #000; padding: 0;'><textarea style='border: 0; width:100%; height: 100%;'></textarea></div><div class='col-md-1 saveBtn'><i class='fas fa-save'></i></div></div>");
+                $("#mainContainer").append("<div class='row' id='hour"+ i ++ +"'><div class='col-sm-1 hour'><p>" + m.format('h a') + "</p></div><div class='time-block col-sm-10 future'><textarea></textarea></div><div class='col-md-1 saveBtn'><i class='fas fa-save'></i></div></div>");
             }
             else if((moment(m).isBefore(moment(), 'hour')) == true){
-                $("#mainContainer").append("<div class='row' id='hour"+ i ++ +"'style='margin-top: -1px'><div class='col-md-1' style='border-top: 1px solid #000; border-bottom: 1px solid #000;'><p>" + m.format('h a') + "</p></div><div class='col-md-10 past' style='border: 1px solid #000; padding: 0;'><textarea style='border: 0; width:100%; height: 100%;'></textarea></div><div class='col-md-1 saveBtn'><i class='fas fa-save'></i></div></div>");
+                $("#mainContainer").append("<div class='row' id='hour"+ i ++ +"'><div class='col-sm-1 hour'><p>" + m.format('h a') + "</p></div><div class='time-block col-sm-10 past'><textarea></textarea></div><div class='col-md-1 saveBtn'><i class='fas fa-save'></i></div></div>");
             }
             else if((moment(m).isSame(moment(), 'hour')) == true){
-                $("#mainContainer").append("<div class='row' id='hour"+ i ++ +"'style='margin-top: -1px'><div class='col-md-1' style='border-top: 1px solid #000; border-bottom: 1px solid #000;'><p>" + m.format('h a') + "</p></div><div class='col-md-10 present' style='border: 1px solid #000; padding: 0;'><textarea style='border: 0; width:100%; height: 100%;'></textarea></div><div class='col-md-1 saveBtn'><i class='fas fa-save'></i></div></div>");
+                $("#mainContainer").append("<div class='row' id='hour"+ i ++ +"'><div class='col-sm-1 hour'><p>" + m.format('h a') + "</p></div><div class='time-block col-sm-10 present'><textarea></textarea></div><div class='col-md-1 saveBtn'><i class='fas fa-save'></i></div></div>");
             }
         }
         $('.saveBtn').on('click', function(){
